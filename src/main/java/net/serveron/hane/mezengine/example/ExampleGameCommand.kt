@@ -1,6 +1,6 @@
 package net.serveron.hane.mezengine.example
 
-import net.serveron.hane.mezengine.core.MezThread
+import net.serveron.hane.mezengine.core.MezEngineCore
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.command.CommandExecutor
 import net.serveron.hane.mezengine.core.MezThread.Flows
@@ -16,8 +16,7 @@ class ExampleGameCommand(plugin: JavaPlugin) : CommandExecutor {
         flowsList.add(Flows(ExampleStart(), true))
         flowsList.add(Flows(Wait(10000), true))
         flowsList.add(Flows(ExampleEnd(), true))
-        val thread = Thread(MezThread(flowsList))
-        thread.start()
+        MezEngineCore().run(flowsList)
 
         return true
     }
