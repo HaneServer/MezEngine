@@ -25,7 +25,7 @@ Spigotで開発するゲームを楽にするライブラリ
     <dependency>
         <groupId>com.github.HaneServer</groupId>
         <artifactId>MezEngine</artifactId>
-        <version>0.1.0</version>
+        <version>VERSION</version>
     </dependency>
 </dependencies>
 ```
